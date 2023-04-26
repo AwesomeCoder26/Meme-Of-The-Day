@@ -21,6 +21,7 @@
 
         header {
             background-color: rgb(224, 198, 0);
+            position: relative;
         }
 
         h1 {
@@ -30,6 +31,23 @@
 
         .flex {
             display: flex;
+        }
+
+        .info{
+            background: transparent;
+            border: none;
+            position: absolute;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            top: calc(50% - 35px);
+            right: 50px;
+            cursor: pointer;
+        }
+
+        .info:hover{
+            background-color: rgba(163, 163, 163, 0.5);
         }
 
         .just-cent {
@@ -42,6 +60,10 @@
 
     <header class="flex just-cent">
         <img src="./Assets/logo.png" width="200px">
+
+        <button class = "info" onclick = "info()">
+            <img class = "infoImg" src = "./Assets/infoLogo.png" width = "50px" height = "50px">
+        </button>
     </header>
 
     <div class="flex just-cent" style = "margin-top: 30px;">
@@ -53,6 +75,12 @@
             src="https://i.imgur.com/gwy9G6s.jpg" width = "500px">
     </div>
 
+    <script>
+        function info(){
+            alert("A new meme will be put in this website every Monday-Friday by 8:24 AM...");
+        }
+    </script>
+    
 </body>
 
 </html>
